@@ -1,0 +1,68 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+
+        <item name="android:statusBarColor">?colorPrimary</item>
+
+        <!-- arriere plan -->
+        <item name="android:windowBackground">@color/very_light_grey</item>
+
+        <!-- bottom nav -->
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+
+        <!-- switch does not work here -->
+        <!--<item name="switchStyle">@style/MySwitchStyle</item>-->
+
+        <!-- checkbox does not work here-->
+        <!--<item name="android:checkboxStyle">@style/MyCheckBoxStyle</item>-->
+    </style>
+
+    <!-- bottom nav theme -->
+    <style name="Widget.App.BottomNavigationView" parent="">
+        <!-- couleur arriere plan -->
+        <item name="backgroundTint">?colorPrimary</item>
+        <!-- icons -->
+        <item name="itemIconSize">20dp</item>
+        <item name="itemIconTint">@drawable/nav_icon_color_state</item> <!-- Color  -->
+        <!-- text  -->
+        <item name="itemTextColor">@drawable/nav_text_color_state</item> <!-- Color  -->
+        <item name="itemTextAppearanceInactive">@style/navTextInactive</item>
+        <item name="itemTextAppearanceActive">@style/navTextActive</item>
+    </style>
+
+    <!-- bottom nav theme again -->
+    <style name="navTextInactive">
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="navTextActive">
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textSize">15sp</item>
+        <item name="fontFamily">@font/lato_bold</item>
+    </style>
+
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <!-- todo hack : same color than the background setDisplayShowTitleEnabled not working-->
+        <item name="android:textColorPrimary">?colorPrimary</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">@color/black</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">@color/black</item>
+        <!-- Applies to views in their normal state. -->
+        <item name="colorControlNormal">@color/black</item>
+        <!-- Applies to views in their activated state (i.e checked or switches) -->
+        <item name="colorControlActivated">@color/black</item>
+        <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">@color/black</item>
+    </style>
+
+    <!-- This configures the styles for the title within the Toolbar  -->
+    <style name="Toolbar.TitleText" parent="@style/TitleCenter" />
+
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">amTheme</string>
+
+    <!-- tabbed bar -->
+    <string name="team_title">Equipe</string>
+    <string name="market_title">Marché</string>
+    <string name="filter_title">Filtres</string>
+
+    <!-- MarketFragment -->
+    <string name="fruit">Fruits</string>
+    <string name="legume">Légumes</string>
+
+    <!-- FilterFragment -->
+    <string name="options">Options</string>
+    <string name="price">Prix</string>
+    <string name="size">Taille</string>
+    <string name="weight">Poid</string>
+    <string name="buttons">Boutons</string>
+    <string name="left_button">Gauche</string>
+    <string name="right_button">Right</string>
+    <string name="toggle">Toggle</string>
+    <string name="buildings">Monuments</string>
+    <string name="taxis">Taxis</string>
+    <string name="shared_pref">shared_pref</string>
+    <string name="contact">Contacter</string>
+
+</resources>

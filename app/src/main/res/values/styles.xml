@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Title">
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="fontFamily">@font/lato</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="fontFamily">@font/lato</item>
+    </style>
+
+    <style name="TitleCenter">
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Title2">
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="teamImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+
+    <style name="teamImageViewCalling">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">55dp</item>
+    </style>
+
+    <style name="marketImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/radius</item>
+        <item name="cornerSizeTopRight">@dimen/radius</item>
+    </style>
+
+    <style name="numberImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">13dp</item>
+    </style>
+
+    <style name="buttonFilterStyle">
+        <item name="fontFamily">Lato</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textSize">18sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/filter_button_state</item>
+        <item name="android:textColor">@color/filter_button_text_color</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <!-- switch -->
+    <style name="MySwitchStyle" parent="Base.Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:theme">@style/switchButtonStyle</item>
+    </style>
+
+    <style name="switchButtonStyle">
+        <!-- track = line -->
+        <!-- thumn = round -->
+        <item name="thumbTint">@color/white</item>
+        <item name="trackTint">@color/filter_switch_button_color</item>
+    </style>
+
+    <!-- checkbox theme : does not work -->
+    <style name="MyCheckBoxStyle" parent="Base.Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:theme">@style/checkboxStyle</item>
+    </style>
+
+    <style name="checkboxStyle">
+        <item name="android:button">@drawable/checkbox_state</item>
+    </style>
+
+    <!-- for calling -->
+    <!-- parent="@android:style/Theme.Dialog" -->
+    <style name="MaterialDialogSheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/dark_grey</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/MaterialDialogSheetAnimation</item>
+    </style>
+
+    <style name="MaterialDialogSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="android:windowExitAnimation">@anim/popup_hide</item>
+    </style>
+
+</resources>

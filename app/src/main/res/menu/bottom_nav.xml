@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/teamFragment"
+        android:title="@string/team_title"
+        android:icon="@drawable/ic_team_icon"/>
+    <item
+        android:id="@+id/marketFragment"
+        android:title="@string/market_title"
+        android:icon="@drawable/ic_market_icon"/>
+    <item
+        android:id="@+id/filterFragment"
+        android:title="@string/filter_title"
+        android:icon="@drawable/ic_filter_icon"/>
+</menu>
