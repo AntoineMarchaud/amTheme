@@ -1,10 +1,14 @@
 <resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--   your app branding color for the app bar -->
         <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/white</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/dark_grey</item>
 
-        <item name="android:statusBarColor">?colorPrimary</item>
+        <!--  USE THIS FOR STATUS BAR COLOR -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
 
         <!-- arriere plan -->
         <item name="android:windowBackground">@color/very_light_grey</item>

@@ -9,9 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.amarchaud.amTheme.MainActivity
 import com.amarchaud.amTheme.R
+import com.amarchaud.amTheme.databinding.DialogCallBinding
 import com.amarchaud.amTheme.databinding.FragmentTeamBinding
 import com.amarchaud.amTheme.ui.adapter.TeamAdapter
 import com.amarchaud.amTheme.ui.interfaces.ITeamClickListener
+import com.amarchaud.amTheme.ui.main.sub.BottomSheetFragment
+import com.amarchaud.amTheme.ui.main.sub.DialogCallFragment
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class TeamFragment : Fragment(), ITeamClickListener {
@@ -64,16 +68,13 @@ class TeamFragment : Fragment(), ITeamClickListener {
 
     override fun onClick(element: Triple<Int, String, String>) {
 
-        val dialog : DialogFragment= DialogCallFragment.newInstance(element)
-        dialog.show(childFragmentManager, null)
-        /*
-        findNavController().navigate(
-            TeamFragmentDirections.actionTeamFragmentToDialogCallFragment(
-                element.first,
-                element.second,
-                element.third
-            )
-        )*/
+        // with DialogFragment
+        //val dialog : DialogFragment= DialogCallFragment.newInstance(element)
+        //dialog.show(parentFragmentManager, null)
+
+        // with BottomSheetDialog
+        val dialog: DialogFragment = BottomSheetFragment.newInstance(element)
+        dialog.show(parentFragmentManager, null)
     }
 
 }

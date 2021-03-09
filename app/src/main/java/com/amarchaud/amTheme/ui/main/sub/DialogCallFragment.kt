@@ -1,4 +1,4 @@
-package com.amarchaud.amTheme.ui.main
+package com.amarchaud.amTheme.ui.main.sub
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
