@@ -45,9 +45,15 @@ class MainActivity : AppCompatActivity() {
             toolbar.setupWithNavController(navController, appBarConfiguration)
             bottomNav.setupWithNavController(navController)
         }
+    }
 
-        // remove bottom nav bar (home + back)
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus)
+            hideSystemUI()
+    }
 
+    private fun hideSystemUI() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // android 11
             window.insetsController?.let {
                 // Default behavior is that if navigation bar is hidden, the system will "steal" touches
