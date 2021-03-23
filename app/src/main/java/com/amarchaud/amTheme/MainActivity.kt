@@ -3,7 +3,6 @@ package com.amarchaud.amTheme
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +12,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.amarchaud.amTheme.databinding.ActivityMainBinding
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -44,14 +45,11 @@ class MainActivity : AppCompatActivity() {
             setSupportActionBar(toolbar)
             toolbar.setupWithNavController(navController, appBarConfiguration)
             bottomNav.setupWithNavController(navController)
+
+            hideSystemUI()
         }
     }
 
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-        if (hasFocus)
-            hideSystemUI()
-    }
 
     private fun hideSystemUI() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // android 11
@@ -74,14 +72,16 @@ class MainActivity : AppCompatActivity() {
                             // Set the content to appear under the system bars so that the
                             // content doesn't resize when the system bars hide and show.
                             //or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            //or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            //or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                             // Hide the nav bar and status bar
                             or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            or View.SYSTEM_UI_FLAG_FULLSCREEN
+                            //or View.SYSTEM_UI_FLAG_FULLSCREEN
                     )
+
         }
     }
+
 
     fun changeToolbarTitle(title: String) {
         binding.toolbarTitle.text = title
