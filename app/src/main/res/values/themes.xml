@@ -1,6 +1,6 @@
 <resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.AppTheme" parent="Theme.MaterialComponents.NoActionBar">
         <!--   your app branding color for the app bar -->
         <item name="colorPrimary">@color/white</item>
         <!--   darker variant for the status bar and contextual app bars -->
@@ -9,6 +9,9 @@
         <!--  USE THIS FOR STATUS BAR COLOR -->
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
+
+        <!-- full screen -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
 
         <!-- arriere plan -->
         <item name="android:windowBackground">@color/very_light_grey</item>
@@ -50,7 +53,7 @@
     </style>
 
 
-    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
         <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
         <!-- todo hack : same color than the background setDisplayShowTitleEnabled not working-->
         <item name="android:textColorPrimary">?colorPrimary</item>
@@ -65,8 +68,5 @@
         <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
         <item name="colorControlHighlight">@color/black</item>
     </style>
-
-    <!-- This configures the styles for the title within the Toolbar  -->
-    <style name="Toolbar.TitleText" parent="@style/TitleCenter" />
 
 </resources>
