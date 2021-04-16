@@ -7,11 +7,11 @@
         <item name="colorPrimaryDark">@color/dark_grey</item>
 
         <!--  USE THIS FOR STATUS BAR COLOR -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">?colorPrimary</item>
         <item name="android:windowLightStatusBar">true</item>
 
-        <!-- full screen -->
+        <!-- color of the navigation bottom SYSTEM bar  -->
         <item name="android:navigationBarColor">@android:color/transparent</item>
 
         <!-- arriere plan -->
@@ -55,6 +55,7 @@
 
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:background">?colorPrimary</item>
         <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
         <!-- todo hack : same color than the background setDisplayShowTitleEnabled not working-->
         <item name="android:textColorPrimary">?colorPrimary</item>
