@@ -1,4 +1,4 @@
-<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.AppTheme" parent="Theme.MaterialComponents.NoActionBar">
         <!--   your app branding color for the app bar -->
@@ -8,7 +8,6 @@
 
         <!--  USE THIS FOR STATUS BAR COLOR -->
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
 
         <!-- color of the navigation bottom SYSTEM bar  -->

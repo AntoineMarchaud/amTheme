@@ -39,6 +39,9 @@
 
 
     <androidx.appcompat.widget.SwitchCompat
+        android:textOn="on"
+        android:textOff="off"
+        android:text="titit"
         style="@style/MySwitchStyle"
         android:id="@+id/switchButton"
         android:layout_width="wrap_content"
